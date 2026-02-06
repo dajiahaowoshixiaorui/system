@@ -1,0 +1,39 @@
+"""常量定义"""
+
+# 图书状态
+BOOK_STATUS_AVAILABLE = "available"
+BOOK_STATUS_BORROWED = "borrowed"
+BOOK_STATUS_MAINTENANCE = "maintenance"
+
+# 借阅状态
+BORROW_STATUS_BORROWED = "borrowed"
+BORROW_STATUS_RETURNED = "returned"
+BORROW_STATUS_OVERDUE = "overdue"
+BORROW_STATUS_LOST = "lost"
+
+# 用户角色
+USER_ROLE_ADMIN = "admin"
+USER_ROLE_LIBRARIAN = "librarian"
+USER_ROLE_USER = "user"
+
+# 借阅配置
+DEFAULT_BORROW_DAYS = 30
+MAX_BORROW_DAYS = 60
+DEFAULT_RENEW_DAYS = 14
+MAX_RENEW_COUNT = 2
+OVERDUE_FINE_PER_DAY = 0.5  # 逾期罚款每天0.5元
+
+# 默认分页
+DEFAULT_PAGE_SIZE = 10
+MAX_PAGE_SIZE = 100
+
+# 缓存配置
+CACHE_EXPIRE_SHORT = 60  # 1分钟
+CACHE_EXPIRE_MEDIUM = 300  # 5分钟
+CACHE_EXPIRE_LONG = 3600  # 1小时
+
+# 缓存Key前缀
+CACHE_KEY_BOOK = "book:"
+CACHE_KEY_USER = "user:"
+CACHE_KEY_CATEGORY = "category:"
+CACHE_KEY_STATS = "stats:"

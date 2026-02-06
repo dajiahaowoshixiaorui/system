@@ -1,0 +1,6 @@
+export { default as Login } from './Login'
+export { default as Dashboard } from './Dashboard'
+export * from './books'
+export * from './categories'
+export * from './users'
+export * from './borrows'

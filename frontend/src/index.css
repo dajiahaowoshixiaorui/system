@@ -1,0 +1,245 @@
+/* 全局样式 - 未来科技风格 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 50%, #bcccdc 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 204, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 204, 0.6);
+}
+
+/* 卡片悬浮效果 */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 102, 204, 0.2);
+}
+
+/* 按钮光效 */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+/* 表格样式增强 */
+.ant-table {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 12px;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(0, 212, 255, 0.15) !important;
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000000;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(0, 212, 255, 0.05) !important;
+}
+
+/* 输入框样式 */
+.ant-input,
+.ant-select-selector,
+.ant-picker {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 212, 255, 0.5) !important;
+  color: #000000 !important;
+}
+
+.ant-input::placeholder {
+  color: #666666 !important;
+}
+
+.ant-select-selection-placeholder {
+  color: #666666 !important;
+}
+
+.ant-input:hover,
+.ant-select-selector:hover,
+.ant-picker:hover {
+  border-color: #00d4ff !important;
+}
+
+.ant-input:focus,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2) !important;
+}
+
+/* 标签样式 */
+.ant-tag {
+  border-radius: 4px;
+  border: none;
+  padding: 2px 8px;
+}
+
+/* 模态框样式 */
+.ant-modal-content {
+  background: linear-gradient(145deg, #ffffff 0%, #f0f0f0 100%) !important;
+  border: 1px solid rgba(0, 212, 255, 0.4);
+}
+
+.ant-modal-header {
+  background: #f5f5f5 !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.ant-modal-title {
+  color: #000000 !important;
+}
+
+.ant-modal-close-x {
+  color: #000000;
+}
+
+.ant-modal-body {
+  color: #000000 !important;
+}
+
+/* 菜单样式 */
+.ant-menu-dark {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.3), transparent) !important;
+  border-right: 3px solid #00d4ff;
+}
+
+.ant-menu-dark .ant-menu-item {
+  color: #ffffff !important;
+}
+
+/* 页脚样式 */
+.ant-layout-footer {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* 霓虹效果 */
+.neon-text {
+  color: #0066cc;
+  text-shadow: 0 0 10px rgba(0, 102, 204, 0.3),
+               0 0 20px rgba(0, 102, 204, 0.2),
+               0 0 30px rgba(0, 102, 204, 0.1);
+}
+
+/* 玻璃拟态卡片 */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* 页脚样式 */
+.ant-layout-footer {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #000000;
+}
+
+/* 卡片样式 */
+.ant-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-card-head-title {
+  color: #000000 !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.ant-card-head-title {
+  color: #ffffff !important;
+}
+
+/* 表单样式 */
+.ant-form-item-label > label {
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+.ant-form-item-label > label.ant-required::before {
+  color: #ff4d4f !important;
+}
